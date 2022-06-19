@@ -9,13 +9,13 @@ A Node.js module and easy way for to integrate auth-token
 This module was initially developed by @iperezluis, for open source.
 Currently, we are few maintainers trying to deal with it. :) More contributors are always welcome! ❤️ if you are interested we can discuss it and add you after strict rules, like enabling Two-Factor Auth in your npm and GitHub accounts.
 
-Highlights
+<h2>Highlights</h2>
 
 - Low memory footprint
 - Graceful error handling
 - Very high test coverage
 
-Install
+<h2>Install</h2>
 
 This project requires Node.js >= 10.13. Install it using yarn or npm.
 We highly recommend to use Yarn when you think to contribute to this project.
@@ -23,12 +23,19 @@ We highly recommend to use Yarn when you think to contribute to this project.
 ```
 
 npm install token-register
+
+```
+
+or try:
+
+```
 yarn add token-register
 
 ```
 
-Examples
-For more examples look at the examples/ directory.
+<h2>Examples</h2>
+
+- For more examples look at the examples/ directory.
 
 -NOTE: the first step is you should include .env file and you project and add the following enviroment variable
 
@@ -36,8 +43,8 @@ For more examples look at the examples/ directory.
   JWT_KEY= "YOUR PRIVATE KEY"
 ```
 
-- The code example:
-  Is necesary to introduce two params in the token function "uid" and "expireIn"
+  <h2>The code example:</h2>
+  - Is necesary to introduce two params in the token function "uid" and "expireIn"
 
 - expireIn: Expiration time for token
 - uid: id or variable that you wants to encrypt
@@ -61,7 +68,7 @@ console.log(check());
 //check token
 const checkingToken = async () => {
 try {
-  const { res } = token;
+  const { res } = check;
   const uid = await checkToken(res);
   //we return decrypted token
   return uid;
